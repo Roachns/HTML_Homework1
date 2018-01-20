@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Latitude Homework Webpage</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Latitude</a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Max Temperature</a></li>
+                      <li><a href="#">Humidity</a></li>
+                      <li><a href="#">Cloudiness</a></li>
+                      <li><a href="#">Wind Speed</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Comparison</a></li>
+                  <li><a href="#">Data</a></li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <!--Large Left Box-->
+            <div class="col-md-8">
+                <div class="box">
+                <section id="intro">
+                    <h1>Summary: Latitude vs. X</h1>
+                    <hr>
+                    <figure>
+                                <a target="_blank" href="TemperatureInWorldCities.png">
+                                    <img id="temp-sample" src="TemperatureInWorldCities.png" alt="Latitude vs. Temperature" style="float: left; margin-right: 10px; margin-bottom: 5px">
+                                    
+                                </a>
+                    </figure>
+                    
+                    
+                    <p>This module employs Python requests, APIs, and JSON traversals to answer a fundamental question: what weather trends can
+                            we observe as we approach the equator? Using the Citipy library and OpenWeatherMap API, this script creates a representative
+                            model of weather across world cities.
+                    </p>
+                            
+                    <p> The program randomly generates 1500 latitude/longitude pairs and feeds them to the OpenWeatherMapAPI. It performs a
+                            series of successive throttled API calls to extract the weather data in all found cities. It then drops duplicate 
+                            cities, counts the total, and saves the resulting table as a CSV. To showcase the following relationships, it builds a series of scatter plots using Matplotlib:
+                    </p>    
+
+                </section>
+                </div>
+            </div>
+        
+            <!--Smaller Right Box-->
+            <div class="col-md-4">
+                <div class="box">
+                <h2>Visualizations</h2>
+                <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>        
+
+</body>
+</html>
